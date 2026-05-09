@@ -1,4 +1,4 @@
-package dev.tensorhero.tinynum;
+package cn.tinycs.tinynum;
 
 /**
  * N-dimensional array — the core data structure of tinynum.

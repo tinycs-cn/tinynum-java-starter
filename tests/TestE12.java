@@ -1,4 +1,4 @@
-import dev.tensorhero.tinynum.NDArray;
+import cn.tinycs.tinynum.NDArray;
 import java.util.Arrays;
 
 public class TestE12 {

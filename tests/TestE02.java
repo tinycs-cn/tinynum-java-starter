@@ -2,7 +2,7 @@
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
-import dev.tensorhero.tinynum.NDArray;
+import cn.tinycs.tinynum.NDArray;
 
 public class TestE02 {
     public static void main(String[] args) {
@@ -38,9 +38,17 @@ public class TestE02 {
         // --- error: wrong index count ---
         try {
             a.get(1);
-            emit("error_wrong_indices", "NO_EXCEPTION");
+            emit("error_wrong_indices", "NO_ERROR");
         } catch (Exception e) {
-            emit("error_wrong_indices", "EXCEPTION");
+            emit("error_wrong_indices", "ERROR");
+        }
+
+        // --- error: out-of-bounds index ---
+        try {
+            a.get(10, 0);
+            emit("error_out_of_bounds", "NO_ERROR");
+        } catch (Exception e) {
+            emit("error_out_of_bounds", "ERROR");
         }
     }
 

@@ -5,7 +5,7 @@
 ## 项目结构
 
 ```
-src/main/java/dev/tensorhero/tinynum/
+src/main/java/cn/tinycs/tinynum/
 ├── NDArray.java   ← 核心实现文件
 ├── DType.java     ← 数据类型
 └── Slice.java     ← 切片定义

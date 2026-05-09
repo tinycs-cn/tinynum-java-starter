@@ -2,7 +2,7 @@
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
-import dev.tensorhero.tinynum.NDArray;
+import cn.tinycs.tinynum.NDArray;
 
 public class TestE04 {
     public static void main(String[] args) {
@@ -51,18 +51,18 @@ public class TestE04 {
         try {
             NDArray f = NDArray.fromArray(new float[24], 2, 3, 4);
             f.transpose();
-            emit("error_transpose_non2d", "NO_EXCEPTION");
+            emit("error_transpose_non2d", "NO_ERROR");
         } catch (Exception ex) {
-            emit("error_transpose_non2d", "EXCEPTION");
+            emit("error_transpose_non2d", "ERROR");
         }
 
         // --- error: invalid axes ---
         try {
             NDArray g = NDArray.fromArray(new float[]{1, 2, 3, 4, 5, 6}, 2, 3);
             g.transpose(0, 0);
-            emit("error_invalid_axes", "NO_EXCEPTION");
+            emit("error_invalid_axes", "NO_ERROR");
         } catch (Exception ex) {
-            emit("error_invalid_axes", "EXCEPTION");
+            emit("error_invalid_axes", "ERROR");
         }
     }
 
@@ -72,11 +72,12 @@ public class TestE04 {
     }
 
     private static String shapeStr(int[] shape) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < shape.length; i++) {
-            if (i > 0) sb.append(",");
+            if (i > 0) sb.append(", ");
             sb.append(shape[i]);
         }
+        sb.append("]");
         return sb.toString();
     }
 

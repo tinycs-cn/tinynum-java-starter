@@ -2,7 +2,7 @@
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
-import dev.tensorhero.tinynum.NDArray;
+import cn.tinycs.tinynum.NDArray;
 
 public class TestE01 {
     public static void main(String[] args) {
@@ -44,9 +44,9 @@ public class TestE01 {
         // --- error: data/shape mismatch ---
         try {
             NDArray.fromArray(new float[]{1,2,3}, 2, 2);
-            emit("error_mismatch", "NO_EXCEPTION");
+            emit("error_mismatch", "NO_ERROR");
         } catch (Exception e) {
-            emit("error_mismatch", "EXCEPTION");
+            emit("error_mismatch", "ERROR");
         }
     }
 
@@ -56,11 +56,12 @@ public class TestE01 {
     }
 
     private static String shapeStr(int[] shape) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < shape.length; i++) {
-            if (i > 0) sb.append(",");
+            if (i > 0) sb.append(", ");
             sb.append(shape[i]);
         }
+        sb.append("]");
         return sb.toString();
     }
 }

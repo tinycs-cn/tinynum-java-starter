@@ -2,7 +2,7 @@
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
-import dev.tensorhero.tinynum.NDArray;
+import cn.tinycs.tinynum.NDArray;
 
 public class TestE03 {
     public static void main(String[] args) {
@@ -43,10 +43,28 @@ public class TestE03 {
         // --- error: reshape size mismatch ---
         try {
             a.reshape(4, 4);
-            emit("error_reshape_size", "NO_EXCEPTION");
+            emit("error_reshape_size", "NO_ERROR");
         } catch (Exception ex) {
-            emit("error_reshape_size", "EXCEPTION");
+            emit("error_reshape_size", "ERROR");
         }
+
+        // --- error: two -1 dimensions ---
+        try {
+            a.reshape(-1, -1);
+            emit("error_reshape_double_neg1", "NO_ERROR");
+        } catch (Exception ex) {
+            emit("error_reshape_double_neg1", "ERROR");
+        }
+
+        // --- reshape on non-contiguous (transposed) array ---
+        // original [[1,2,3],[4,5,6]], transposed = [[1,4],[2,5],[3,6]]
+        // flatten of transposed (shape [6]) = [1,4,2,5,3,6]
+        NDArray nc = NDArray.fromArray(new float[]{1, 2, 3, 4, 5, 6}, 2, 3);
+        NDArray ncT = nc.transpose();          // shape [3,2], non-contiguous
+        NDArray ncR = ncT.reshape(6);          // must deep-copy then reshape
+        emit("reshape_noncontiguous_toString", ncR.toString());
+        ncR.set(99.0f, 0);
+        emit("reshape_noncontiguous_copy", fmt(nc.get(0, 0)));  // original unchanged
     }
 
     private static void emit(String testName, String result) {
@@ -55,11 +73,12 @@ public class TestE03 {
     }
 
     private static String shapeStr(int[] shape) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < shape.length; i++) {
-            if (i > 0) sb.append(",");
+            if (i > 0) sb.append(", ");
             sb.append(shape[i]);
         }
+        sb.append("]");
         return sb.toString();
     }
 

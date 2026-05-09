@@ -1,5 +1,5 @@
-import dev.tensorhero.tinynum.NDArray;
-import dev.tensorhero.tinynum.Slice;
+import cn.tinycs.tinynum.NDArray;
+import cn.tinycs.tinynum.Slice;
 import java.util.Arrays;
 
 public class TestE11 {
@@ -68,6 +68,14 @@ public class TestE11 {
             emit("slice_range_error", "NO_ERROR");
         } catch (Exception ex) {
             emit("slice_range_error", "ERROR");
+        }
+
+        // --- error: negative step ---
+        try {
+            a.slice(Slice.of(0, 3, -1));
+            emit("error_step_neg", "NO_ERROR");
+        } catch (Exception ex) {
+            emit("error_step_neg", "ERROR");
         }
     }
 

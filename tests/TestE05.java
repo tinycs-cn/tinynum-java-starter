@@ -2,7 +2,7 @@
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
-import dev.tensorhero.tinynum.NDArray;
+import cn.tinycs.tinynum.NDArray;
 
 public class TestE05 {
     public static void main(String[] args) {
@@ -61,6 +61,14 @@ public class TestE05 {
         // --- unary on transposed array ---
         NDArray m = NDArray.fromArray(new float[]{1, 2, 3, 4, 5, 6}, 2, 3);
         emit("unary_transposed", m.transpose().square().toString());
+
+        // --- non-zero sin / cos / tanh (catches always-zero / trivial implementations) ---
+        NDArray sinInp  = NDArray.fromArray(new float[]{(float)(Math.PI / 2)}, 1);
+        NDArray cosInp  = NDArray.fromArray(new float[]{(float) Math.PI},      1);
+        NDArray tanhInp = NDArray.fromArray(new float[]{100.0f},               1);
+        emit("sin_half_pi", fmt(sinInp.sin().get(0)));
+        emit("cos_pi",      fmt(cosInp.cos().get(0)));
+        emit("tanh_large",  fmt(tanhInp.tanh().get(0)));
     }
 
     private static void emit(String testName, String result) {
