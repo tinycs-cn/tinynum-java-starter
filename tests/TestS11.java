@@ -2,7 +2,7 @@ import cn.tinycs.tinynum.NDArray;
 import cn.tinycs.tinynum.Slice;
 import java.util.Arrays;
 
-public class TestE11 {
+public class TestS11 {
     public static void main(String[] args) {
         // ---- slice 2D ----
         NDArray a = NDArray.fromArray(new float[]{1,2,3,4,5,6,7,8,9}, 3, 3);

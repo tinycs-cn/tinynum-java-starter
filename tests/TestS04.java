@@ -1,10 +1,10 @@
-// TestE04.java — E04 Transpose test driver
+// TestS04.java — S04 Transpose test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 
-public class TestE04 {
+public class TestS04 {
     public static void main(String[] args) {
         // --- 2D transpose shape ---
         NDArray a = NDArray.fromArray(new float[]{1, 2, 3, 4, 5, 6}, 2, 3);

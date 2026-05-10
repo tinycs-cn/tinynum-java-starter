@@ -1,10 +1,10 @@
-// TestE05.java — E05 Unary Math test driver
+// TestS05.java — S05 Unary Math test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 
-public class TestE05 {
+public class TestS05 {
     public static void main(String[] args) {
         // --- neg ---
         NDArray a = NDArray.fromArray(new float[]{1, -2, 3}, 3);

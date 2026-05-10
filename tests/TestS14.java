@@ -1,7 +1,7 @@
 import cn.tinycs.tinynum.NDArray;
 import java.util.Arrays;
 
-public class TestE14 {
+public class TestS14 {
     public static void main(String[] args) {
         // ---- indexSelect axis=0 (row select) ----
         NDArray w = NDArray.fromArray(new float[]{1,2,3,4,5,6,7,8,9,10,11,12}, 4, 3);

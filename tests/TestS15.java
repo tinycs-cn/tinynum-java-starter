@@ -2,7 +2,7 @@ import cn.tinycs.tinynum.NDArray;
 import cn.tinycs.tinynum.DType;
 import java.util.Arrays;
 
-public class TestE15 {
+public class TestS15 {
     public static void main(String[] args) {
         // ---- tril default diagonal ----
         NDArray t0 = NDArray.tril(3, 0);

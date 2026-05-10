@@ -1,10 +1,10 @@
-// TestE03.java — E03 Reshape test driver
+// TestS03.java — S03 Reshape test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 
-public class TestE03 {
+public class TestS03 {
     public static void main(String[] args) {
         NDArray a = NDArray.fromArray(new float[]{1, 2, 3, 4, 5, 6}, 2, 3);
 

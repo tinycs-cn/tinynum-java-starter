@@ -10,7 +10,7 @@ src/main/java/cn/tinycs/tinynum/
 ├── DType.java     ← 数据类型
 └── Slice.java     ← 切片定义
 tests/
-├── TestE01.java ... TestE15.java
+├── TestS01.java ... TestS15.java
 ```
 
 ## 快速开始

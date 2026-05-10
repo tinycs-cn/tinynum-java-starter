@@ -20,7 +20,7 @@ public class NDArray {
     int offset;         // for views/slices
 
     // ================================================================
-    // E01 — Storage & Shape
+    // S01 — Storage & Shape
     // ================================================================
 
     /**
@@ -32,57 +32,57 @@ public class NDArray {
      * @throws IllegalArgumentException if data.length != product of shape
      */
     public static NDArray fromArray(float[] data, int... shape) {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Creates a zero-filled NDArray with the given shape. */
     public static NDArray zeros(int... shape) {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Creates a one-filled NDArray with the given shape. */
     public static NDArray ones(int... shape) {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Creates an NDArray filled with {@code value}. */
     public static NDArray full(float value, int... shape) {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Creates a zero-filled NDArray with the same shape as {@code other}. */
     public static NDArray zerosLike(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Creates a one-filled NDArray with the same shape as {@code other}. */
     public static NDArray onesLike(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Returns the total number of elements. */
     public int size() {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Returns the number of dimensions. */
     public int ndim() {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Returns a copy of the shape array. */
     public int[] shape() {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** Pretty-prints the NDArray: e.g. {@code [[1.0, 2.0], [3.0, 4.0]]}. */
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("TODO: E01");
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     // ================================================================
-    // E02 — Strides & Indexing
+    // S02 — Strides & Indexing
     // ================================================================
 
     /**
@@ -90,7 +90,7 @@ public class NDArray {
      * <p>Example: shape [3, 4, 5] → strides [20, 5, 1]</p>
      */
     public static int[] computeStrides(int[] shape) {
-        throw new UnsupportedOperationException("TODO: E02");
+        throw new UnsupportedOperationException("TODO: S02");
     }
 
     /**
@@ -98,21 +98,21 @@ public class NDArray {
      * <p>Uses: {@code physicalIndex = offset + Σ(index[i] × stride[i])}</p>
      */
     public float get(int... indices) {
-        throw new UnsupportedOperationException("TODO: E02");
+        throw new UnsupportedOperationException("TODO: S02");
     }
 
     /** Sets the element at the given multi-dimensional indices. */
     public void set(float value, int... indices) {
-        throw new UnsupportedOperationException("TODO: E02");
+        throw new UnsupportedOperationException("TODO: S02");
     }
 
     /** Returns true if strides form a standard row-major contiguous layout. */
     public boolean isContiguous() {
-        throw new UnsupportedOperationException("TODO: E02");
+        throw new UnsupportedOperationException("TODO: S02");
     }
 
     // ================================================================
-    // E03 — Reshape
+    // S03 — Reshape
     // ================================================================
 
     /**
@@ -120,225 +120,225 @@ public class NDArray {
      * Supports -1 for one dimension to auto-infer its size.
      */
     public NDArray reshape(int... newShape) {
-        throw new UnsupportedOperationException("TODO: E03");
+        throw new UnsupportedOperationException("TODO: S03");
     }
 
     /** Flattens to a 1-D array. Equivalent to {@code reshape(-1)}. */
     public NDArray flatten() {
-        throw new UnsupportedOperationException("TODO: E03");
+        throw new UnsupportedOperationException("TODO: S03");
     }
 
     /** Returns a deep copy (always contiguous). */
     public NDArray duplicate() {
-        throw new UnsupportedOperationException("TODO: E03");
+        throw new UnsupportedOperationException("TODO: S03");
     }
 
     // ================================================================
-    // E04 — Transpose
+    // S04 — Transpose
     // ================================================================
 
     /** 2-D transpose: swaps axis 0 and axis 1 (zero-copy). */
     public NDArray transpose() {
-        throw new UnsupportedOperationException("TODO: E04");
+        throw new UnsupportedOperationException("TODO: S04");
     }
 
     /** N-D transpose: rearranges axes according to the given permutation (zero-copy). */
     public NDArray transpose(int... axes) {
-        throw new UnsupportedOperationException("TODO: E04");
+        throw new UnsupportedOperationException("TODO: S04");
     }
 
     /** Swaps two axes (zero-copy). */
     public NDArray swapAxes(int axis1, int axis2) {
-        throw new UnsupportedOperationException("TODO: E04");
+        throw new UnsupportedOperationException("TODO: S04");
     }
 
     // ================================================================
-    // E05 — Unary Math
+    // S05 — Unary Math
     // ================================================================
 
     /** Returns {@code -x} element-wise. */
     public NDArray neg() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code |x|} element-wise. */
     public NDArray abs() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code e^x} element-wise. */
     public NDArray exp() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code ln(x)} element-wise. */
     public NDArray log() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code √x} element-wise. */
     public NDArray sqrt() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code x²} element-wise. */
     public NDArray square() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code tanh(x)} element-wise. */
     public NDArray tanh() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code sin(x)} element-wise. */
     public NDArray sin() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code cos(x)} element-wise. */
     public NDArray cos() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code sgn(x)} element-wise. */
     public NDArray sign() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns rounded values element-wise. */
     public NDArray round() {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Clips values to {@code [min, max]} element-wise. */
     public NDArray clip(float min, float max) {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     /** Returns {@code x^p} element-wise. */
     public NDArray pow(float p) {
-        throw new UnsupportedOperationException("TODO: E05");
+        throw new UnsupportedOperationException("TODO: S05");
     }
 
     // ================================================================
-    // E06 — Binary Ops & Comparisons (same shape)
+    // S06 — Binary Ops & Comparisons (same shape)
     // ================================================================
 
     // --- Arithmetic (NDArray) ---
 
     /** Element-wise addition. */
     public NDArray add(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise subtraction. */
     public NDArray sub(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise multiplication. */
     public NDArray mul(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise division. */
     public NDArray div(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise power: {@code x^y}. */
     public NDArray pow(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise maximum: {@code max(x, y)}. */
     public NDArray maximum(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     // --- Arithmetic (scalar) ---
 
     /** Adds a scalar to every element. */
     public NDArray add(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Subtracts a scalar from every element. */
     public NDArray sub(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Multiplies every element by a scalar. */
     public NDArray mul(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Divides every element by a scalar. */
     public NDArray div(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     // --- Comparisons (NDArray) — returns 1.0f / 0.0f ---
 
     /** Element-wise equal: returns 1.0 where {@code x == y}. */
     public NDArray eq(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise not-equal: returns 1.0 where {@code x != y}. */
     public NDArray neq(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise greater-than: returns 1.0 where {@code x > y}. */
     public NDArray gt(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise greater-than-or-equal: returns 1.0 where {@code x >= y}. */
     public NDArray gte(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise less-than: returns 1.0 where {@code x < y}. */
     public NDArray lt(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     /** Element-wise less-than-or-equal: returns 1.0 where {@code x <= y}. */
     public NDArray lte(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     // --- Comparisons (scalar) ---
 
     public NDArray eq(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     public NDArray neq(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     public NDArray gt(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     public NDArray gte(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     public NDArray lt(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     public NDArray lte(float scalar) {
-        throw new UnsupportedOperationException("TODO: E06");
+        throw new UnsupportedOperationException("TODO: S06");
     }
 
     // ================================================================
-    // E07 — Broadcasting
+    // S07 — Broadcasting
     // ================================================================
 
     /**
@@ -348,96 +348,96 @@ public class NDArray {
      * @throws IllegalArgumentException if shapes are not broadcast-compatible
      */
     public static int[] broadcastShapes(int[] shapeA, int[] shapeB) {
-        throw new UnsupportedOperationException("TODO: E07");
+        throw new UnsupportedOperationException("TODO: S07");
     }
 
     /**
      * Returns a view broadcast to the target shape (zero-copy, stride=0 trick).
      */
     public NDArray broadcastTo(int... targetShape) {
-        throw new UnsupportedOperationException("TODO: E07");
+        throw new UnsupportedOperationException("TODO: S07");
     }
 
     // ================================================================
-    // E08 — Reduction: Sum & Mean
+    // S08 — Reduction: Sum & Mean
     // ================================================================
 
     /** Returns the sum of all elements. */
     public float sum() {
-        throw new UnsupportedOperationException("TODO: E08");
+        throw new UnsupportedOperationException("TODO: S08");
     }
 
     /** Returns the mean of all elements. */
     public float mean() {
-        throw new UnsupportedOperationException("TODO: E08");
+        throw new UnsupportedOperationException("TODO: S08");
     }
 
     /** Sum along a single axis. */
     public NDArray sum(int axis, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E08");
+        throw new UnsupportedOperationException("TODO: S08");
     }
 
     /** Mean along a single axis. */
     public NDArray mean(int axis, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E08");
+        throw new UnsupportedOperationException("TODO: S08");
     }
 
     /** Sum along multiple axes. */
     public NDArray sum(int[] axes, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E08");
+        throw new UnsupportedOperationException("TODO: S08");
     }
 
     // ================================================================
-    // E09 — Reduction: Max, Var & friends
+    // S09 — Reduction: Max, Var & friends
     // ================================================================
 
     /** Max along an axis. */
     public NDArray max(int axis, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Min along an axis. */
     public NDArray min(int axis, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Index of the maximum value along an axis. */
     public NDArray argmax(int axis) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Index of the minimum value along an axis. */
     public NDArray argmin(int axis) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Product of elements along an axis. */
     public NDArray prod(int axis) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Variance along an axis. */
     public NDArray var(int axis, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Standard deviation along an axis. */
     public NDArray std(int axis, boolean keepDims) {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     /** Counts non-zero elements. */
     public int countNonZero() {
-        throw new UnsupportedOperationException("TODO: E09");
+        throw new UnsupportedOperationException("TODO: S09");
     }
 
     // ================================================================
-    // E10 — MatMul
+    // S10 — MatMul
     // ================================================================
 
     /** Vector dot product (1-D · 1-D → scalar wrapped in 0-D array). */
     public NDArray dot(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E10");
+        throw new UnsupportedOperationException("TODO: S10");
     }
 
     /**
@@ -448,11 +448,11 @@ public class NDArray {
      * </ul>
      */
     public NDArray matMul(NDArray other) {
-        throw new UnsupportedOperationException("TODO: E10");
+        throw new UnsupportedOperationException("TODO: S10");
     }
 
     // ================================================================
-    // E11 — Slicing & Views
+    // S11 — Slicing & Views
     // ================================================================
 
     /**
@@ -461,85 +461,85 @@ public class NDArray {
      * @param ranges one {@link Slice} per axis
      */
     public NDArray slice(Slice... ranges) {
-        throw new UnsupportedOperationException("TODO: E11");
+        throw new UnsupportedOperationException("TODO: S11");
     }
 
     /** Adds a dimension of size 1 at the given axis. */
     public NDArray expandDims(int axis) {
-        throw new UnsupportedOperationException("TODO: E11");
+        throw new UnsupportedOperationException("TODO: S11");
     }
 
     /** Removes a dimension of size 1 at the given axis. */
     public NDArray squeeze(int axis) {
-        throw new UnsupportedOperationException("TODO: E11");
+        throw new UnsupportedOperationException("TODO: S11");
     }
 
     /** Removes all dimensions of size 1. */
     public NDArray squeeze() {
-        throw new UnsupportedOperationException("TODO: E11");
+        throw new UnsupportedOperationException("TODO: S11");
     }
 
     // ================================================================
-    // E12 — Creation & Random
+    // S12 — Creation & Random
     // ================================================================
 
     /** Creates a 1-D array: [start, start+step, ..., end). */
     public static NDArray arange(float start, float end, float step) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Creates a 1-D array of {@code num} evenly spaced values in [start, end]. */
     public static NDArray linspace(float start, float end, int num) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Creates an n×n identity matrix. */
     public static NDArray eye(int n) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Creates a diagonal matrix from a 1-D vector. */
     public static NDArray diag(NDArray vector) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Creates an NDArray with standard normal random values N(0,1). */
     public static NDArray randn(int... shape) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Creates an NDArray with uniform random values in [0, 1). */
     public static NDArray rand(int... shape) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Creates an NDArray with uniform random values in [lo, hi). */
     public static NDArray uniform(float lo, float hi, int... shape) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Shuffles an index array in-place (Fisher-Yates). */
     public static void shuffle(int[] indices) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     /** Fills all elements with the given value (in-place). */
     public void fill(float value) {
-        throw new UnsupportedOperationException("TODO: E12");
+        throw new UnsupportedOperationException("TODO: S12");
     }
 
     // ================================================================
-    // E13 — Join & Transform
+    // S13 — Join & Transform
     // ================================================================
 
     /** Concatenates arrays along an existing axis. */
     public static NDArray concatenate(NDArray[] arrays, int axis) {
-        throw new UnsupportedOperationException("TODO: E13");
+        throw new UnsupportedOperationException("TODO: S13");
     }
 
     /** Stacks arrays along a new axis. */
     public static NDArray stack(NDArray[] arrays, int axis) {
-        throw new UnsupportedOperationException("TODO: E13");
+        throw new UnsupportedOperationException("TODO: S13");
     }
 
     /**
@@ -549,16 +549,16 @@ public class NDArray {
      * @param value    the fill value for padded regions
      */
     public NDArray pad(int[][] padWidth, float value) {
-        throw new UnsupportedOperationException("TODO: E13");
+        throw new UnsupportedOperationException("TODO: S13");
     }
 
     /** Reverses elements along the given axis. */
     public NDArray flip(int axis) {
-        throw new UnsupportedOperationException("TODO: E13");
+        throw new UnsupportedOperationException("TODO: S13");
     }
 
     // ================================================================
-    // E14 — Fancy Indexing
+    // S14 — Fancy Indexing
     // ================================================================
 
     /**
@@ -566,7 +566,7 @@ public class NDArray {
      * <p>Example: {@code weight.indexSelect(0, new int[]{3, 0, 3, 7})}</p>
      */
     public NDArray indexSelect(int axis, int[] indices) {
-        throw new UnsupportedOperationException("TODO: E14");
+        throw new UnsupportedOperationException("TODO: S14");
     }
 
     /**
@@ -574,7 +574,7 @@ public class NDArray {
      * <p>Equivalent to NumPy's {@code np.add.at(self, indices, src)}.</p>
      */
     public void scatterAdd(int axis, int[] indices, NDArray src) {
-        throw new UnsupportedOperationException("TODO: E14");
+        throw new UnsupportedOperationException("TODO: S14");
     }
 
     /**
@@ -582,7 +582,7 @@ public class NDArray {
      * replaced by {@code value}.
      */
     public NDArray maskedFill(NDArray mask, float value) {
-        throw new UnsupportedOperationException("TODO: E14");
+        throw new UnsupportedOperationException("TODO: S14");
     }
 
     /**
@@ -590,46 +590,46 @@ public class NDArray {
      * non-zero, else from {@code y}.
      */
     public static NDArray where(NDArray condition, NDArray x, NDArray y) {
-        throw new UnsupportedOperationException("TODO: E14");
+        throw new UnsupportedOperationException("TODO: S14");
     }
 
     // ================================================================
-    // E15 — Capstone: Toolkit
+    // S15 — Capstone: Toolkit
     // ================================================================
 
     /** Lower-triangular matrix of size n (for causal masks). */
     public static NDArray tril(int n, int diagonal) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** Upper-triangular matrix of size n. */
     public static NDArray triu(int n, int diagonal) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** L2 norm along an axis. */
     public NDArray norm(int axis) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** Differences between consecutive elements along an axis. */
     public NDArray diff(int axis) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** Computes the q-th percentile across all elements. */
     public NDArray percentile(float q) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** Returns the indices that would sort along the given axis. */
     public NDArray argsort(int axis) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** Returns sorted unique elements. */
     public NDArray unique() {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /**
@@ -637,11 +637,11 @@ public class NDArray {
      * corresponding elements in {@code other}.
      */
     public boolean allClose(NDArray other, float atol) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 
     /** Converts element type: float32 ↔ int8. */
     public NDArray astype(DType dtype) {
-        throw new UnsupportedOperationException("TODO: E15");
+        throw new UnsupportedOperationException("TODO: S15");
     }
 }

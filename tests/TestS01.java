@@ -1,10 +1,10 @@
-// TestE01.java — E01 Storage & Shape test driver
+// TestS01.java — S01 Storage & Shape test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 
-public class TestE01 {
+public class TestS01 {
     public static void main(String[] args) {
         // --- zeros ---
         NDArray z = NDArray.zeros(2, 3);

@@ -1,7 +1,7 @@
 import cn.tinycs.tinynum.NDArray;
 import java.util.Arrays;
 
-public class TestE13 {
+public class TestS13 {
     public static void main(String[] args) {
         // ---- concatenate axis=0 ----
         NDArray a = NDArray.fromArray(new float[]{1,2,3,4}, 2, 2);

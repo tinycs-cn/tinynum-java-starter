@@ -1,11 +1,11 @@
-// TestE07.java — E07 Broadcasting test driver
+// TestS07.java — S07 Broadcasting test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 import java.util.Arrays;
 
-public class TestE07 {
+public class TestS07 {
     public static void main(String[] args) {
         // --- broadcastShapes ---
         emit("bc_same", Arrays.toString(NDArray.broadcastShapes(new int[]{2, 3}, new int[]{2, 3})));

@@ -1,10 +1,10 @@
-// TestE02.java — E02 Strides & Indexing test driver
+// TestS02.java — S02 Strides & Indexing test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 
-public class TestE02 {
+public class TestS02 {
     public static void main(String[] args) {
         // --- computeStrides ---
         emit("strides_2d", stridesStr(NDArray.computeStrides(new int[]{2, 3})));

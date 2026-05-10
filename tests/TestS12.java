@@ -1,7 +1,7 @@
 import cn.tinycs.tinynum.NDArray;
 import java.util.Arrays;
 
-public class TestE12 {
+public class TestS12 {
     public static void main(String[] args) {
         // ---- arange ----
         NDArray a1 = NDArray.arange(0, 5, 1);

@@ -1,10 +1,10 @@
-// TestE06.java — E06 Binary Ops & Comparisons test driver
+// TestS06.java — S06 Binary Ops & Comparisons test driver
 // Provided by tinynum-starter. Do NOT modify.
 // The tester compiles and runs this file to verify your NDArray implementation.
 
 import cn.tinycs.tinynum.NDArray;
 
-public class TestE06 {
+public class TestS06 {
     public static void main(String[] args) {
         NDArray a = NDArray.fromArray(new float[]{2, 4, 6, 8, 10, 12}, 2, 3);
         NDArray b = NDArray.fromArray(new float[]{1, 2, 3, 4, 5, 6}, 2, 3);
