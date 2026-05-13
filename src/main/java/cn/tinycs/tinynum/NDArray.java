@@ -1,4 +1,4 @@
-package cn.tinycs.tinynum;
+gengpackage cn.tinycs.tinynum;
 
 /**
  * N 维数组 —— tinynum 的核心数据结构。
@@ -14,10 +14,10 @@ public class NDArray {
     /** 设置全局随机种子，确保随机操作可复现。 */
     public static void manualSeed(long seed) { globalRng = new java.util.Random(seed); }
 
-    float[] data;       // 一维连续存储
-    int[] shape;        // 各维大小，如 [2, 3, 4]
-    int[] strides;      // 各维步长，如 [12, 4, 1]（行优先）
-    int offset;         // 视图/切片的起始偏移
+    float[] data;       // 一维连续存储           [S01]
+    int[] shape;        // 各维大小，如 [2, 3, 4]  [S01]
+    int[] strides;      // 各维步长，如 [12, 4, 1] [S02]
+    int offset;         // 视图/切片起始偏移        [S11]
 
     // ================================================================
     // S01 — 存储与形状
