@@ -1,10 +1,10 @@
 package cn.tinycs.tinynum;
 
 /**
- * Supported data types for {@link NDArray}.
+ * {@link NDArray} 支持的数据类型。
  *
- * <p>The course uses {@code FLOAT32} throughout. {@code INT8} is introduced
- * in S15 to prepare for int8 quantization in tinytorch4j.</p>
+ * <p>课程全程使用 {@code FLOAT32}。{@code INT8} 在 S15 引入，
+ * 为 tinytorch4j 的 int8 量化做准备。</p>
  */
 public enum DType {
     FLOAT32,
