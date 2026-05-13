@@ -35,85 +35,53 @@ public class NDArray {
      * @throws IllegalArgumentException 若 data.length 不等于 shape 各维之积
      */
     public static NDArray fromArray(float[] data, int... shape) {
-        int expectedSize = 1;
-        for (int dim : shape) expectedSize *= dim;
-        if (data.length != expectedSize) {
-            throw new IllegalArgumentException("Data length " + data.length +
-                    " does not match expected size " + expectedSize + " for shape " + java.util.Arrays.toString(shape));
-        }
-        NDArray array = new NDArray();
-        array.data = data.clone();
-        array.shape = shape.clone();
-        // array.strides = computeStrides(shape);
-        // array.offset = 0;
-        return array;
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 创建全零 NDArray。 */
     public static NDArray zeros(int... shape) {
-        return full(0.0f, shape);
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 创建全一 NDArray。 */
     public static NDArray ones(int... shape) {
-        return full(1.0f, shape);
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 创建以 {@code value} 填充的 NDArray。 */
     public static NDArray full(float value, int... shape) {
-        int size = 1;
-        for (int dim : shape) size *= dim;
-        float[] data = new float[size];
-        java.util.Arrays.fill(data, value);
-        return fromArray(data, shape);
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 创建与 {@code other} 同形的全零 NDArray。 */
     public static NDArray zerosLike(NDArray other) {
-        return zeros(other.shape);
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 创建与 {@code other} 同形的全一 NDArray。 */
     public static NDArray onesLike(NDArray other) {
-        return ones(other.shape);
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 返回元素总数。 */
     public int size() {
-        return data.length;
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 返回维度数。 */
     public int ndim() {
-        return shape.length;
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 返回 shape 数组的副本。 */
     public int[] shape() {
-        return shape.clone();
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     /** 格式化打印，如 {@code [[1.0, 2.0], [3.0, 4.0]]}。 */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        toStringHelper(sb, 0, 0);
-        return sb.toString();
-    }
-
-    private void toStringHelper(StringBuilder sb, int dim, int index) {
-        if (dim == shape.length) {
-            sb.append(data[index]);
-            return;
-        }
-        int stride = 1;
-        for (int d = dim + 1; d < shape.length; d++) stride *= shape[d];
-        sb.append('[');
-        for (int i = 0; i < shape[dim]; i++) {
-            if (i > 0) sb.append(", ");
-            toStringHelper(sb, dim + 1, index + i * stride);
-        }
-        sb.append(']');
+        throw new UnsupportedOperationException("TODO: S01");
     }
 
     // ================================================================
