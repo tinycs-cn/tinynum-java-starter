@@ -26,6 +26,9 @@ public class NDArray {
     /**
      * 从一维数据数组和指定 shape 创建 NDArray。
      *
+     * <p>S01 只需初始化 {@code data} 和 {@code shape}；
+     * {@code strides} 在 S02 中初始化，{@code offset} 默认为 0。</p>
+     *
      * @param data  一维数据数组
      * @param shape 目标形状（如 2, 3 表示 2×3 矩阵）
      * @return 新的 NDArray
