@@ -48,6 +48,17 @@ public class TestS01 {
         } catch (Exception e) {
             emit("error_mismatch", "ERROR");
         }
+
+        // --- 数据隔离：修改原始数组不影响 NDArray ---
+        float[] rawData = {1, 2, 3, 4};
+        NDArray isolated = NDArray.fromArray(rawData, 2, 2);
+        rawData[0] = 99;
+        emit("data_isolation", isolated.toString());
+
+        // --- shape() 返回副本：修改返回值不影响内部状态 ---
+        NDArray sq = NDArray.zeros(2, 3);
+        sq.shape()[0] = 99;
+        emit("shape_copy", sq.shape()[0] == 2 ? "OK" : "FAIL");
     }
 
     private static void emit(String testName, String result) {
